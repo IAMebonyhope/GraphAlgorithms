@@ -15,6 +15,8 @@ namespace GraphAlgorithm
             adjList = list;
         }
 
+        public Dictionary<Vertix<V>, List<Node<V>>> GraphAdjList { get { return adjList; } }
+
         public List<Vertix<V>> Vertices()
         {
             List<Vertix<V>> keys = adjList.Keys.ToList();
