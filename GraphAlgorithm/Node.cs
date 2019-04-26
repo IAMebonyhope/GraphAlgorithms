@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace GraphAlgorithm
 {
-    class Node
+    public class Node<V>
     {
+        public Vertix<V> Vertix { get; } //adjacent vertix
+
+        public int Weight { get; } // weight of the edge connecting them
+
+        public Node(Vertix<V> vertix, int weight)
+        {
+            Vertix = vertix;
+            Weight = weight;
+        }
+
+
+        public override string ToString()
+        { 
+            return Vertix.Name + ":" + Weight;
+        }
     }
+
 }
